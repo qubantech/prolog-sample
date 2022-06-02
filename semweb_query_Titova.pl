@@ -26,9 +26,6 @@ Optionally use metaphones to fix typos:
 ?- double_metaphone('seknd wrld vor', X).
 X = 'SKNT'.*/
 
-load_ontology :-
-  rdf_load('dbpedia_2016-04.owl', []).
-
 rdf_assert_data([rdf(X,Y,Z)|T]) :-
   rdf_assert(X,Y,Z), rdf_assert_data(T).
 rdf_assert_data([_|T]) :- rdf_assert_data(T).
@@ -39,7 +36,6 @@ load_data :-
   rdf_assert_data(T).
 
 load :-
-  load_ontology,
   load_data.
 
 событие('http://ru.dbpedia.org/resource/Stray_Kids', родительный_падеж) --> [группы, stray, kids, и, g-idle] .
