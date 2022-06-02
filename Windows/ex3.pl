@@ -1,7 +1,0 @@
-sentence --> pronoun(subject),verb_phrase.
-verb_phrase --> verb,pronoun(object).
-pronoun(subject) --> [he].
-pronoun(subject) --> [she].
-pronoun(object) --> [him].
-pronoun(object) --> [her].
-verb --> [likes].
